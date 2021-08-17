@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+section: post
+---
+<div class="page-container">
+  <article>
+    <h1>{{ title }}</h1>
+    <p>
+      <small>
+        <strong> <a href="/authors/{{ author | slug }}/">{{ author }}</a> </strong> <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> 
+      </small>
+    </p>
+    <hr>
+
+    {{ layoutContent | safe }}
+
+    {% if tags %}
+      <p class="tag-list">
+      {% for tag in tags %}
+        {%- if tag != "post" -%}
+          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          <a class="tag" href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+        {%- endif -%}
+      {% endfor %}
+      </p>
+    {% endif %}
+
+  </article>
+  
+  <h4>Комментарии</h4>
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="{{ metadata.keys.cusdisKey | safe }}"
+    data-page-id="{{ title | safe }} {{ date | safe }}"
+    data-page-url="{{ metadata.url }}/posts/{{ title | slug }}/"
+    data-page-title="{{ title | safe }}"
+  ></div>
+  <script defer src="https://cusdis.com/js/widget/lang/ru.js"></script>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+  <nav>
+    <a href="{{ '/blog/' | url }}">← Все статьи</a>
+  </nav>
+</div>

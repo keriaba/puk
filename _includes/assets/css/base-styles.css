@@ -1,0 +1,280 @@
+/* Modified version of Sakura.css v1.3.1
+ * ================
+ * Minimal css theme.
+ * Project: https://github.com/oxalorg/sakura/
+ */
+
+/* stylelint-disable no-descending-specificity */
+
+/* Body */
+html {
+  font-size: 62.5%;
+  font-family: var(--font-family-base);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--color-text);
+  font-size: 1.8rem;
+  line-height: 1.618;
+  background-color: var(--color-bg);
+}
+
+main {
+  padding: 13px;
+}
+
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+
+footer {
+  margin-top: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-family-heading);
+  line-height: 1.1;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  padding-bottom: 1rem;
+  font-size: 2.35em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+small,
+sub,
+sup {
+  font-size: 75%;
+}
+
+hr {
+  border-color: var(--color-border);
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  padding-left: 1.4em;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+blockquote {
+  margin-right: 0;
+  margin-bottom: 2.5rem;
+  margin-left: 0;
+  padding-top: 0.8em;
+  padding-right: 0.8em;
+  padding-bottom: 0.8em;
+  padding-left: 1em;
+  background-color: var(--color-bg-secondary);
+  border-left: 5px solid var(--color-primary);
+}
+
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6 {
+  margin: 0.4em 0;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+/* Pre and Code */
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  padding: 1em;
+  overflow-x: auto;
+  background-color: var(--color-bg-secondary);
+}
+
+code {
+  padding: 0 0.5em;
+  font-size: 0.9em;
+  white-space: pre-wrap;
+  background-color: var(--color-bg-secondary);
+}
+
+pre > code {
+  padding: 0;
+  white-space: pre;
+  background-color: transparent;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  text-align: justify;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.5em;
+  border-bottom: 1px solid var(--color-bg-secondary);
+}
+
+/* Buttons, forms and input */
+input,
+textarea {
+  border: 1px solid var(--color-text);
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--color-primary);
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 35px;
+}
+
+.btn,
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  color: var(--color-bg);
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.btn[disabled],
+button[disabled],
+input[type='submit'][disabled],
+input[type='reset'][disabled],
+input[type='button'][disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.btn:focus:enabled,
+.btn:hover:enabled,
+button:focus:enabled,
+button:hover:enabled,
+input[type='submit']:focus:enabled,
+input[type='submit']:hover:enabled,
+input[type='reset']:focus:enabled,
+input[type='reset']:hover:enabled,
+input[type='button']:focus:enabled,
+input[type='button']:hover:enabled {
+  outline: 0;
+}
+
+textarea,
+select,
+input {
+  box-sizing: border-box;
+
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  color: var(--color-text);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-bg-secondary);
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+textarea:focus,
+select:focus,
+input:focus {
+  border: 1px solid var(--color-primary);
+  outline: 0;
+}
+
+input[type='checkbox']:focus {
+  outline: 1px dotted var(--color-primary);
+}
+
+label,
+legend,
+fieldset {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}

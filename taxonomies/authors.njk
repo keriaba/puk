@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.authors
+  size: Infinity
+permalink: "authors/index.html"
+renderData:
+  title: "{{ taxonomies.authors.title | safe }}"
+  metaDescription: "{{ taxonomies.authors.metaDescription | safe }}"
+---
+<div class="page-container">
+  <h1>{{ taxonomies.authors.title }}</h1>
+
+  <section>
+    {% for author in pagination.items %}
+      <article>
+        <h3>
+          <a href="/authors/{{ author | slug }}">{{ author | safe }}</a>
+        </h3>
+      </article>
+    {% endfor %}
+    <nav>
+      <a href="{{ '/blog/' | url }}">{{ taxonomies.authors.backToAll | safe }}</a>
+    </nav>
+  </section>
+</div>

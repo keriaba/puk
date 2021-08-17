@@ -1,0 +1,61 @@
+{
+  "short_name": "Paparrot",
+  "name": "Paparrot",
+  "icons": [
+    {
+      "src": "/static/img/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/img/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#fafafa",
+  "shortcuts": [
+    {
+      "name": "Go to blog",
+      "short_name": "Blog",
+      "description": "",
+      "url": "/blog",
+      "icons": [
+        {
+          "src": "/static/img/blog.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Send email",
+      "short_name": "Contacts",
+      "description": "Go to contact page",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/static/img/contact.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "description": "Personal site template",
+  "screenshots": [
+    {
+      "src": "/static/img/screenshot.png",
+      "type": "image/png",
+      "sizes": "540x720"
+    },
+    {
+      "src": "/static/img/screenshot.jpg",
+      "type": "image/jpg",
+      "sizes": "540x720"
+    }
+  ]
+}
